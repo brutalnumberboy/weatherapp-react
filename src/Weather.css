@@ -1,0 +1,14 @@
+body {
+  background: rgb(105,105,231);
+  background: radial-gradient(circle, rgba(105,105,231,1) 35%, rgba(72,212,241,1) 100%); 
+}
+.city-name{
+  text-align: center;
+}
+
+.card-weather{
+  text-align: center;
+  margin: 5em;
+  margin-left: 35%;
+  margin-right: 35%;
+}
