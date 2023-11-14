@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import Weather from './Weather';
-
+import API_KEY from './OpenWeatherApi';
 function App() {
 
-    const API_KEY = '909e5a386d9197815f1b9c68871ee502';
     const [latitude, setLat] = useState([]);
     const [longitude, setLong] = useState([]);
 
