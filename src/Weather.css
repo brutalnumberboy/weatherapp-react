@@ -1,14 +1,30 @@
 body {
-  background: rgb(105,105,231);
-  background: radial-gradient(circle, rgba(105,105,231,1) 35%, rgba(72,212,241,1) 100%); 
+  background: rgb(105, 105, 231);
+  background: radial-gradient(
+    circle,
+    rgba(105, 105, 231, 1) 35%,
+    rgba(72, 212, 241, 1) 100%
+  );
 }
-.city-name{
+.city-name {
   text-align: center;
 }
 
-.card-weather{
+.card-weather {
   text-align: center;
   margin: 5em;
   margin-left: 35%;
   margin-right: 35%;
+}
+
+.input {
+  display: inline;
+  border-radius: 0.5em;
+  align-self: center;
+  border: 1px solid;
+  background: radial-gradient(
+    circle,
+    rgba(105, 105, 231, 1) 35%,
+    rgba(72, 212, 241, 1) 100%
+  );
 }
