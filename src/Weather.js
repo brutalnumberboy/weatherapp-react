@@ -9,7 +9,6 @@ import DeviceThermostatIcon from "@mui/icons-material/DeviceThermostat";
 import AirIcon from "@mui/icons-material/Air";
 import CloudIcon from "@mui/icons-material/Cloud";
 import WaterDropIcon from "@mui/icons-material/WaterDrop";
-import { Input } from "@mui/material";
 
 export default function Weather({ weatherData }) {
   const card = (
@@ -49,13 +48,12 @@ export default function Weather({ weatherData }) {
         </Typography>
         <br />
         <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.primary"
-          align="left"
+          sx={{ fontSize: 24, fontFamily: "Ubuntu" }}
+          color="navy"
+          gutterBottom
         >
           Current Weather:
         </Typography>
-        <br />
         <Typography
           sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
           color="text.secondary"
@@ -107,7 +105,6 @@ export default function Weather({ weatherData }) {
       >
         {card}
       </Card>
-      {/* <Input className="input">{ input }</Input> */}
     </>
   );
 }
