@@ -27,9 +27,11 @@ function App() {
   }, [latitude, longitude]);
 
   return (
+    <>
     <div className="App">
       <Weather weatherData={weather} />
     </div>
+    </>
   );
 }
 export default App;
