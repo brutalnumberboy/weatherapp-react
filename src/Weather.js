@@ -36,8 +36,8 @@ export default function Weather({ weatherData }) {
           color="text.secondary"
           align="left"
         >
-          <PublicIcon fontSize="small" /> Timezone: {weatherData.timezone/3600} 
-        </Typography>  {/* need to figure out how to convert this to proper UTC*/}
+          <PublicIcon fontSize="small" /> Timezone: {weatherData.timezone/3600} UTC
+        </Typography>  {}
         <br />
         <Typography
           sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
@@ -60,7 +60,7 @@ export default function Weather({ weatherData }) {
           align="left"
         >
           <DeviceThermostatIcon fontSize="small" /> Temperature:{" "}
-          {weatherData.main?.temp}
+          {weatherData.main?.temp} &deg;C
         </Typography>
         <br />
         <Typography
