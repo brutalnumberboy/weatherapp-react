@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Weather from "./Weather";
+import AppCard from "./Weather.js";
 import { API_KEY } from "./OpenWeatherApi";
 function App() {
   const [latitude, setLat] = useState([]);
@@ -29,7 +29,7 @@ function App() {
   return (
     <>
     <div className="App">
-      <Weather weatherData={weather} />
+      <AppCard weatherData={weather} />
     </div>
     </>
   );

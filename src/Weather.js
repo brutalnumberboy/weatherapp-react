@@ -1,110 +1,30 @@
 import "./Weather.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import React from "react";
-import LocationCityIcon from "@mui/icons-material/LocationCity";
-import PublicIcon from "@mui/icons-material/Public";
-import DeviceThermostatIcon from "@mui/icons-material/DeviceThermostat";
-import AirIcon from "@mui/icons-material/Air";
-import CloudIcon from "@mui/icons-material/Cloud";
-import WaterDropIcon from "@mui/icons-material/WaterDrop";
+import ThermostatIcon from '@mui/icons-material/Thermostat';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
 
-export default function Weather({ weatherData }) {
-  const card = (
-    <React.Fragment>
-      <CardContent color="aliceblue">
-        <Typography
-          sx={{ fontSize: 24, fontFamily: "Ubuntu" }}
-          color="navy"
-          gutterBottom
-        >
-          Weather
-        </Typography>
-        <Typography variant="p" component="div"></Typography>
-        <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.secondary"
-          align="left"
-        >
-          <PublicIcon fontSize="small" /> Country: {weatherData.sys?.country}
-        </Typography> 
-        <br />
-        
-        <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.secondary"
-          align="left"
-        >
-          <PublicIcon fontSize="small" /> Timezone: {weatherData.timezone/3600} UTC
-        </Typography>  {}
-        <br />
-        <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.secondary"
-          align="left"
-        >
-          <LocationCityIcon fontSize="small" /> City: {weatherData.name}
-        </Typography>
-        <br />
-        <Typography
-          sx={{ fontSize: 24, fontFamily: "Ubuntu" }}
-          color="navy"
-          gutterBottom
-        >
-          Current Weather:
-        </Typography>
-        <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.secondary"
-          align="left"
-        >
-          <DeviceThermostatIcon fontSize="small" /> Temperature:{" "}
-          {weatherData.main?.temp} &deg;C
-        </Typography>
-        <br />
-        <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.secondary"
-          align="left"
-        >
-          <AirIcon fontSize="small" /> Wind Speed: {weatherData.wind?.speed}
-        </Typography>
-        <br />
-        <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.secondary"
-          align="left"
-        >
-          <CloudIcon fontSize="small" /> Clouds: {weatherData.clouds?.all}
-        </Typography>
-        <br />
-        <Typography
-          sx={{ mb: 1.5, fontFamily: "Ubuntu", display: "inline-block" }}
-          color="text.secondary"
-          align="left"
-        >
-          <WaterDropIcon fontSize="small" /> Rain: {weatherData.rain?.["1h"]}
-        </Typography>
-        <br />
-      </CardContent>
-    </React.Fragment>
-  );
+const AppCard = ({ weatherData }) => (
+  <Card className="card">
+    <CardContent>
+      <div className="content">
+        <div className="current-temp">
+          <img src="https://openweathermap.org/img/wn/10d@2x.png" />
+          <p className="temperature"><ThermostatIcon />{weatherData.main?.temp} &deg;C</p>
+          <p className="city"><LocationCityIcon /> {weatherData.name}</p>
+        </div>
+        <div className="column">
+          <p className="temperature">
+            Minimal Temperature: {weatherData.main?.temp_min} &deg;C
+          </p>
+          <p className="temperature">
+            Maximum Temperature: {weatherData.main?.temp_max} &deg;C
+          </p>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+);
 
-  const input = (
-    <React.Fragment>
-      <input name="citySearch" />
-    </React.Fragment>
-  );
-  return (
-    <>
-      <Card
-        variant="outlined"
-        className="card-weather"
-        style={{ backgroundColor: "aliceblue" }}
-      >
-        {card}
-      </Card>
-    </>
-  );
-}
+export default AppCard;

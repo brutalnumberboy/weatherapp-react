@@ -1,28 +1,20 @@
-.city-name {
-  text-align: center;
+body{
+  background-color: #141414;
 }
-
-.card-weather {
-  text-align: center;
+.card {
   margin: 5em;
   margin-left: 35%;
   margin-right: 35%;
-  background: rgb(105, 105, 231);
-  background: radial-gradient(
-    circle,
-    rgba(105, 105, 231, 1) 35%,
-    rgba(72, 212, 241, 1) 100%
-  );
+}
+.current-temp{
+  text-align: center;
+  font-size: xx-large;
+}
+.content{
+  margin: 10px 0px 0px 10px;
 }
 
-.input {
-  display: inline;
-  border-radius: 0.5em;
-  align-self: center;
-  border: 1px solid;
-  background: radial-gradient(
-    circle,
-    rgba(105, 105, 231, 1) 35%,
-    rgba(72, 212, 241, 1) 100%
-  );
+.column{
+  display: flex;  
+  justify-content: space-between;
 }
