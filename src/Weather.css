@@ -1,7 +1,10 @@
 body{
-  background-color: #141414;
+  background: rgb(20,56,78);
 }
 .card {
+
+  background: rgb(39,182,175);
+  background: linear-gradient(133deg, rgba(39,182,175,1) 26%, rgba(0,212,255,1) 84%); 
   margin: 5em;
   margin-left: 35%;
   margin-right: 35%;
